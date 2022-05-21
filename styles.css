@@ -1,0 +1,16 @@
+section.forms{
+    display: flex;
+    flex-direction: row;
+}
+section.forms form{
+    margin: 0 auto;
+    background-color: darkcyan;
+    width: 400px;
+    height: 250px;
+}
+section.forms form>input,select, button {
+    display: block;
+    margin: 20px;
+    width: 80%;
+    outline: none;
+}
