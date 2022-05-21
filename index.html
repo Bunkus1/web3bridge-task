@@ -22,15 +22,41 @@
             <div class="form">
                 <input type="text" name="name" placeholder="Name" required id="name">
                 <select name="tiers" id="tiers">
-                    <option value="10000">Tier 1 - N10,000</option>
-                    <option value="20000">Tier 2 - N20,000</option>
-                    <option value="30000">Tier 2 - N30,000</option>
+                    <option value="10000">Tier 1 - N10,000 @ 7%</option>
+                    <option value="20000">Tier 2 - N20,000 @ 12%</option>
+                    <option value="30000">Tier 2 - N30,000 @ 25%</option>
                 </select>
                 <input type="button" value="Register" onclick="validateFormValue();"></button>
             </div>
         </section>
-        <section class="funds"></section>
-        <section class="total"></section>
+        <section class="funds">
+            <table>
+                <tr>
+                  <th>Money Invested</th>
+                  <th>Interest</th>
+                  <th>Weekly Total</th>
+                </tr>
+                <tr>
+                  <td>10,000</td>
+                  <td>700</td>
+                  <td>10700</td>
+                </tr>
+                <tr>
+                    <td>20,000</td>
+                    <td>2400</td>
+                    <td>22,400</td>
+                </tr>
+                <tr>
+                    <td>30,000</td>
+                    <td>7500</td>
+                    <td>37,500</td>
+                </tr>
+            </table>
+        </section>
+
+        <section class="total">
+
+        </section>
 
         <script>
             function validateFormValue() {
@@ -39,8 +65,7 @@
                 let user = [];
                 let userDetails = {name:inputName, option};
                 user.push(userDetails);
-                console.log(user);
-                return user;
+                localStorage.setItem(inputName,JSON.stringify(user));
             }
 
             
