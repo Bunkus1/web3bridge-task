@@ -2,13 +2,13 @@ section.forms{
     display: flex;
     flex-direction: row;
 }
-section.forms form{
+section.forms div.form{
     margin: 0 auto;
     background-color: darkcyan;
     width: 400px;
     height: 250px;
 }
-section.forms form>input,select, button {
+section.forms div.form>input,select, button {
     display: block;
     margin: 20px;
     width: 80%;

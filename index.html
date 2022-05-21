@@ -1,27 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web3 Bridge Task</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- <script>
+        function display() {
+           var a = "Simple";
+           var b = "Learning";
+           alert(a +" Easy "+ b);
+        }
+     </script> -->
 </head>
+
 <body>
     <main>
-    <section class="forms">
-        <form action="">
-            <input type="text" name="name" placeholder="Name" required id="">
-            <select name="tiers" id="">
-                <option value="10000">Tier 1 - N10,000</option>
-                <option value="20000">Tier 2 - N20,000</option>
-                <option value="30000">Tier 2 - N30,000</option>
-            </select>
-            <button type="submit">Register</button>
-        </form>
-    </section>
-    <section class="funds"></section>
-    <section class="total"></section>
-</main>
+        <section class="forms">
+            <div class="form">
+                <input type="text" name="name" placeholder="Name" required id="name">
+                <select name="tiers" id="tiers">
+                    <option value="10000">Tier 1 - N10,000</option>
+                    <option value="20000">Tier 2 - N20,000</option>
+                    <option value="30000">Tier 2 - N30,000</option>
+                </select>
+                <input type="button" value="Register" onclick="validateFormValue();"></button>
+            </div>
+        </section>
+        <section class="funds"></section>
+        <section class="total"></section>
+
+        <script>
+            function validateFormValue() {
+                let inputName = document.querySelector('input[type=text]').value;
+                let option = document.querySelector('select#tiers').value;
+                let user = [];
+                let userDetails = {name:inputName, option};
+                user.push(userDetails);
+                console.log(user);
+                return user;
+            }
+
+            
+        </script>
+    </main>
 </body>
+
 </html>
